@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Overpass';
+    src: url('./fonts/Overpass-VariableFont_wght.ttf');
+}
+
+:root {
+    box-sizing: border-box; 
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+
+}
+
+body {
+    background-color: var(--VeryDarkBlue);
+    color: white;
+    font-family: "Overpass", sans-serif;
+}
+
+#container {
+    width: 320px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: var(--DarkBlue);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    font-size: 14px;
+}
+
+#container svg {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    fill: white;
+}
+
+#container svg:hover{
+    fill: #f97513;
+    outline: 10px solid #363c44;
+    border-radius: 10px;   
+}
+
+.selectedsvg{
+    fill: #f97513;
+    outline: 10px solid #363c44;
+    border-radius: 10px; 
+}
+
+#content {
+    margin: 80px 20px 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+}
+
+#content * {
+    margin: 0;
+    color: var(--LightGrey);
+}
+
+#content h3 {
+    font-size: 25px;
+    color: white;
+}
+
+
+menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+menu button {
+    height: 38px;
+    width: 38px;
+    border-radius: 20px;
+    background-color: #3a424b;
+    border-style: none ;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+menu button:hover {
+    background-color: #f97513;
+}
+
+.selection {
+    background-color: white;
+}
+
+#submit {
+    width: 250px;
+    height: 38px;
+    border-radius: 20px;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    align-self: center;
+    color: var(--DarkBlue)
+}
+
+#submit:hover {
+    background-color: white;
+    letter-spacing: 0.1em;
+}
